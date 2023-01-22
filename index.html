@@ -5,14 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matematyka</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/notiflix@3.2.6/dist/notiflix-aio-3.2.6.min.js"
+      integrity="sha256-pXMqYvjzxYjuQ3+Iz0Zpw3Tk3BAoet8dOsODol/iqTI="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <span class="firs-nmb">?</span>
-    <span class="type">+</span>
-    <span class="second-nmb">?</span>
-    <form class="form">
-      <input name="result" type="text" placeholder="wpisz wynik" />
-    </form>
+    <div class="container">
+      <button type="button" class="change-btn">zmień na odejmowanie</button>
+      <span class="firs-nmb numbers">?</span>
+      <span class="sign type">+</span>
+      <span class="second-nmb numbers">?</span>
+      <span class="sign">=</span>
+      <form class="form">
+        <input
+          autocomplete="off"
+          class="form__result"
+          name="result"
+          type="text"
+        />
+      </form>
+    </div>
     <script src="index.js" defer></script>
   </body>
 </html>
