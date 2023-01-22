@@ -31,11 +31,13 @@ const typeHandler = () => {
   if (changeBtn.textContent === "zmień na odejmowanie") {
     changeBtn.textContent = "zmień na dodawanie";
     type.textContent = "-";
+    type.classList.add("minus-padding-bottom");
     reloadHandleMinus();
     // console.log(wynik);
   } else if (changeBtn.textContent === "zmień na dodawanie") {
     changeBtn.textContent = "zmień na odejmowanie";
     type.textContent = "+";
+    type.classList.remove("minus-padding-bottom");
     reloadHandlePlus();
     // console.log(wynik);
   } else return;
@@ -45,11 +47,23 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const result = Number(resultForm.value);
   if (result === goodResult) {
-    alert("Dobrze!");
+    Notiflix.Notify.success(`Dobrze! To było ${result}`, {
+      position: "center-top",
+      cssAnimationStyle: "from-right",
+      clickToClose: true,
+      distance: "60px",
+      showOnlyTheLastOne: true,
+    });
     if (type.textContent === "+") reloadHandlePlus();
     else if (type.textContent === "-") reloadHandleMinus();
   } else {
-    alert("Źle, spróbuj jeszcze raz");
+    Notiflix.Notify.failure(`Źle, to nie jest ${result}, spróbuj jeszcze raz`, {
+      position: "center-top",
+      cssAnimationStyle: "from-left",
+      clickToClose: true,
+      distance: "60px",
+      showOnlyTheLastOne: true,
+    });
     form.reset();
     return;
   }

@@ -19,6 +19,9 @@ body {
   font-size: 30px;
   margin: 0 5px 0 5px;
 }
+.minus-padding-bottom {
+  padding-bottom: 6px;
+}
 /* form {
   
 } */
