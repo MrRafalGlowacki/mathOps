@@ -2,7 +2,18 @@
   box-sizing: border-box;
 }
 body {
-  background-color: aquamarine;
+  background-color: rgb(207, 228, 220);
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 .container {
   display: flex;
@@ -21,10 +32,12 @@ body {
 }
 .minus-padding-bottom {
   padding-bottom: 6px;
+  padding-right: 3.55px;
+  padding-left: 3.55px;
 }
-/* form {
-  
-} */
+.type {
+  width: 18;
+}
 .form__result {
   text-align: center;
   text-justify: center;
@@ -43,11 +56,25 @@ body {
   border: 0;
   border-radius: 10px;
   padding: 5px;
-  background-color: bisque;
+  background-color: rgb(245, 207, 85);
   box-shadow: 2px 1px 3px rgb(0 0 0 / 30%);
   width: 150px;
 }
 .change-btn:hover {
   cursor: pointer;
-  background-color: rgb(241, 204, 159);
+  background-color: rgb(229, 255, 0);
+}
+.change-btn-subtraction {
+  position: absolute;
+  top: 60px;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(245, 207, 85);
+  box-shadow: 2px 1px 3px rgb(0 0 0 / 30%);
+  width: 150px;
+}
+.change-btn-subtraction:hover {
+  cursor: pointer;
+  background-color: rgb(229, 255, 0);
 }
